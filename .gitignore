@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+*.rds
+*.csv
+
+rsconnect/
+
+src/debugging.R
+
+*.html
