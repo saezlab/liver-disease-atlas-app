@@ -11,3 +11,5 @@ rsconnect/
 src/debugging.R
 
 *.html
+
+data-raw/
