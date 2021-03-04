@@ -21,6 +21,6 @@ This application informs for any gene of interest on:
 ### How to cite?
 >Holland CH, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice." _In preparation_. 2021.
 
-^#^ _Shared senior authorship_
+^# _Shared senior authorship_
 
 ### Data

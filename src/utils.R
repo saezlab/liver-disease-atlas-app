@@ -26,7 +26,7 @@ plot_hs_gene_regulation <- function(hs_degs, genes, gene_level_stat = "logFC") {
 }
 
 plot_mm_gene_regulation <- function(mm_degs, genes, treatment, class = "Acute",
-                                    gene_level_stat = "logFC",
+                                    gene_level_stat = "logFC", 
                                     gene_label = FALSE) {
   # translate genes
   mgi_genes <- gene_anno %>%
@@ -148,7 +148,7 @@ get_chronicity <- function(genes) {
 
   if (nrow(df) > 0) {
     label <- df %>%
-      mutate(string = glue("{class} (Rank:{rank})")) %>%
+      mutate(string = glue("{class} (Rank: {rank})")) %>%
       pull(string)
   } else {
     label <- "No chronicity association"
