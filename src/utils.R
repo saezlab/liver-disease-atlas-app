@@ -82,7 +82,7 @@ plot_mm_gene_regulation <- function(mm_degs, genes, treatment, class = "Acute",
   }
   # Add title and further grobs
   p <- p +
-    ggtitle(treatment) 
+    ggtitle(treatment)
   # ggtitle(str_c(treatment, " (", class, ")"))
   return(p)
 }

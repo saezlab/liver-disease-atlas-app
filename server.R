@@ -1,34 +1,40 @@
 server <- function(input, output, session) {
-  
+
   # load tables of  mouse models and patient cohorts
-  output$table_mouse_models <- renderTable({     
+  output$table_mouse_models <- renderTable({
     readr::read_csv2(here("data/mouse_models.csv")) %>%
       mutate(N = as.integer(N))
   })
-  
-  output$table_patient_cohorts <- renderTable({     
+
+  output$table_patient_cohorts <- renderTable({
     readr::read_csv2(here("data/patient_cohorts.csv")) %>%
       mutate(N = as.integer(N))
   })
-  
-  output$consistent_table = renderDT({
+
+  output$consistent_table <- renderDT({
     consistent %>%
       select(rank, gene) %>%
       mutate(gene = as_factor(gene)) %>%
-      DT::datatable(filter = "top",
-                  extensions = "Buttons", rownames = F)
+      DT::datatable(
+        filter = "top",
+        extensions = "Buttons", rownames = F
+      )
   })
-  
-  output$chronicity_table = renderDT({
+
+  output$chronicity_table <- renderDT({
     chronicity %>%
       select(rank, gene, class) %>%
-      mutate(class = as_factor(class),
-             gene = as_factor(gene)) %>%
-      DT::datatable(filter = "top",
-                    extensions = "Buttons", rownames = F)
+      mutate(
+        class = as_factor(class),
+        gene = as_factor(gene)
+      ) %>%
+      DT::datatable(
+        filter = "top",
+        extensions = "Buttons", rownames = F
+      )
   })
-  
-  
+
+
 
   # get min max value
   min_max <- reactive({
