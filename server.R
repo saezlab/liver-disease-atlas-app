@@ -58,7 +58,7 @@ server <- function(input, output, session) {
         genes = input$hs_gene,
         treatment = "CCl4",
         gene_level_stat = input$gene_level_stat,
-        class = "Chronic", gene_label = TRUE
+        class = "Chronic", gene_label = FALSE
       ) +
         scale_x_time(
           breaks = c(0, 5259600, 15778800, 31557600),
@@ -84,7 +84,7 @@ server <- function(input, output, session) {
         genes = input$hs_gene,
         treatment = input$mouse_model,
         gene_level_stat = input$gene_level_stat,
-        class = "Acute", gene_label = TRUE
+        class = "Acute", gene_label = FALSE
       ) +
         xlabels +
         ylim(min_max()[1], min_max()[2])
