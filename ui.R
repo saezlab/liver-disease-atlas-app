@@ -5,20 +5,30 @@ ui <- dashboardPage(
   dashboardHeader(
     title = "Liver disease atlas",
     # Button pointing to the corresponding publication
-    tags$li(class = "dropdown", id="publication",
-            tags$a(href="xxx",
-                   target="_blank", tags$img(icon("file-text"))
-            ),
-            bsTooltip("publication", "Go to the publication",
-                      "bottom", options = list(container = "body"))),
-    
+    tags$li(
+      class = "dropdown", id = "publication",
+      tags$a(
+        href = "xxx",
+        target = "_blank", tags$img(icon("file-text"))
+      ),
+      bsTooltip("publication", "Go to the publication",
+        "bottom",
+        options = list(container = "body")
+      )
+    ),
+
     # Button pointing to the GitHub respository
-    tags$li(class = "dropdown", id="github",
-            tags$a(href="https://github.com/saezlab/liver-disease-atlas-app",
-                   target="_blank", tags$img(icon("github"))
-            ),
-            bsTooltip("github", "View the code of this webside on GitHub",
-                      "bottom", options = list(container = "body")))
+    tags$li(
+      class = "dropdown", id = "github",
+      tags$a(
+        href = "https://github.com/saezlab/liver-disease-atlas-app",
+        target = "_blank", tags$img(icon("github"))
+      ),
+      bsTooltip("github", "View the code of this webside on GitHub",
+        "bottom",
+        options = list(container = "body")
+      )
+    )
   ),
   dashboardSidebar(
     sidebarMenu(
@@ -29,23 +39,27 @@ ui <- dashboardPage(
         tabName = "dashboard",
         icon = icon("dashboard")
       ),
-      menuItem("Data", icon = icon("database"), tabName = "data")
-      ,menuItem("Contact", icon = icon("group"), tabName = "contact")
+      menuItem("Data", icon = icon("database"), tabName = "data"),
+      menuItem("Contact", icon = icon("group"), tabName = "contact")
     ),
-    helpText("Version 0.0.0.9000 (2021)", 
-             style="padding-left:1em; padding-right:1em; position:fixed; bottom:1em")
-    ),
-  
+    helpText("Version 0.0.0.9000 (2021)",
+      style = "padding-left:1em; padding-right:1em; position:fixed; bottom:1em"
+    )
+  ),
+
   dashboardBody(
+    tags$head(includeScript("google-analytics.js")),
     fluidPage(
       useShinyjs(),
       useShinydashboard(),
       tabItems(
-        tabItem("home", 
-                includeMarkdown(here("inst/home.md")),
-                tableOutput("table_mouse_models"),
-                tableOutput("table_patient_cohorts")),
-        
+        tabItem(
+          "home",
+          includeMarkdown(here("inst/home.md")),
+          tableOutput("table_mouse_models"),
+          tableOutput("table_patient_cohorts")
+        ),
+
         tabItem(
           "dashboard",
           fluidRow(
@@ -59,7 +73,6 @@ ui <- dashboardPage(
                 `deselect-all-text` = "Deselect all",
                 `select-all-text` = "Don't click here",
                 `none-selected-text` = "select a gene..."
-                
               )
             )),
             column(4, pickerInput(
@@ -137,12 +150,14 @@ ui <- dashboardPage(
             )
           )
         ),
-        tabItem("data", 
-                tabsetPanel(
-                  type = "tabs",
-                  tabPanel("Human-mouse-consistent genes", DT::dataTableOutput("consistent_table")),
-                  tabPanel("Chronicity", DT::dataTableOutput("chronicity_table"))
-                )),
+        tabItem(
+          "data",
+          tabsetPanel(
+            type = "tabs",
+            tabPanel("Human-mouse-consistent genes", DT::dataTableOutput("consistent_table")),
+            tabPanel("Chronicity", DT::dataTableOutput("chronicity_table"))
+          )
+        ),
         tabItem("contact", includeMarkdown(here("inst/contact.md")))
       )
     )
