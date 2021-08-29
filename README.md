@@ -18,8 +18,8 @@ comprising 227 mice and five studies of human CLD with a total of 372
 patients. See tables below for a summary of the analyzed dataset.
 
 See the corresponding publication for more details: [*Transcriptomic
-cross-species analysis of chronic liver disease reveals a consistent
-regulation pattern between humans and mice*]()
+cross-species analysis of chronic liver disease reveals consistent
+regulation between humans and mice*](https://doi.org/10.1002/hep4.1797).
 
 ## About
 
@@ -53,7 +53,8 @@ This application informs for any gene of interest on:
 > Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S,
 > Longerich T, Hengstler JG<sup>\#</sup>, Saez-Rodriguez J<sup>\#</sup>,
 > Ghallab A<sup>\#</sup>. “Transcriptomic cross-species analysis of
-> chronic liver disease reveals a consistent regulation pattern between
-> humans and mice.” *In preparation*. 2021.
+> chronic liver disease reveals consistent regulation between humans and
+> mice.” *Hepatology Communications*. 2021. DOI:
+> [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
 
 <sup>\#</sup> *Shared senior authorship*

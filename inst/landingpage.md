@@ -1,22 +1,5 @@
----
-output: github_document
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
-
-# Welcome to the Liver disease atlas
-
-<!-- badges: start -->
-<!-- badges: end -->
+# Welcome to the Liver disease app
+> a web application to browse gene regulation in chronic and acute liver diseases
 
 The prevalence of chronic liver diseases (CLD) has increased during the last decades. Mouse models are frequently used to study the pathophysiology of liver diseases, identify therapeutic targets, and test drug candidates.
 
@@ -24,7 +7,7 @@ To allow a better assessment of translational relevance from mouse models to hum
 
 See the corresponding publication for more details: [_Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice_](https://doi.org/10.1002/hep4.1797).
 
-## About
+### About
 
 This application informs for any gene of interest on: 
 
@@ -39,4 +22,4 @@ This application informs for any gene of interest on:
 ### How to cite?
 >Holland CH, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. 2021. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
 
-^#^ _Shared senior authorship_
+^# _Shared senior authorship_

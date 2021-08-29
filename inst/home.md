@@ -4,7 +4,7 @@ The prevalence of chronic liver diseases (CLD) has increased during the last dec
 
 To allow a better assessment of translational relevance from mouse models to human CLD we analyzed genome-wide transcriptome data from seven mouse models (one with chronic and six with acute liver damage) comprising 227 mice and five studies of human CLD with a total of 372 patients. See tables below for a summary of the analyzed dataset.
 
-See the corresponding publication for more details: [_Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice_]()
+See the corresponding publication for more details: [_Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice_]().
 
 ## About
 
@@ -19,7 +19,8 @@ This application informs for any gene of interest on:
 * if the gene is consistently altered in mice and humans. If this is true, the rank is displayed. See the _consistency_ box. The better the displayed rank (from low to high) the stronger the gene is consistently altered in human and mice. Please visit the `data` tab to see the full list of genes.
 
 ### How to cite?
->Holland CH, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic cross-species analysis of chronic liver disease reveals a consistent regulation pattern between humans and mice." _In preparation_. 2021.
+>Holland CH, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulationbetween humans and mice." _Hepatology Communications_. DOI: 
+[xxx](xxx).
 
 ^# _Shared senior authorship_
 
