@@ -163,6 +163,7 @@ server <- function(input, output, session) {
     )
   })
 
-  addClass(selector = "body", class = "sidebar-collapse")
+  # hide the loading message
   hide("loading-content", TRUE, "fade")
+  observe_helpers(withMathJax = TRUE)
 }
