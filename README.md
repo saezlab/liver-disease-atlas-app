@@ -15,7 +15,7 @@ To allow a better assessment of translational relevance from mouse
 models to human CLD we analyzed genome-wide transcriptome data from
 seven mouse models (one with chronic and six with acute liver damage)
 comprising 227 mice and five studies of human CLD with a total of 372
-patients. See tables below for a summary of the analyzed dataset.
+patients.
 
 See the corresponding publication for more details: [*Transcriptomic
 cross-species analysis of chronic liver disease reveals consistent

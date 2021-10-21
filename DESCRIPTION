@@ -1,0 +1,12 @@
+Type: Shiny App
+Title: Liver Disease App
+Version: 1.0.1
+Authors@R: c(
+    person(given = "Christian H.",
+           family = "Holland",
+           role = c("aut"),
+           email = "cholland2408@gmail.com",
+           comment = c(ORCID = "0000-0002-3060-5786"))
+           )
+URL: https://saezlab.shinyapps.io/liverdiseaseatlas/
+BugReports: https://github.com/saezlab/liver-disease-atlas-app/issues
