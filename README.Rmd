@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 
 The prevalence of chronic liver diseases (CLD) has increased during the last decades. Mouse models are frequently used to study the pathophysiology of liver diseases, identify therapeutic targets, and test drug candidates.
 
-To allow a better assessment of translational relevance from mouse models to human CLD we analyzed genome-wide transcriptome data from seven mouse models (one with chronic and six with acute liver damage) comprising 227 mice and five studies of human CLD with a total of 372 patients. See tables below for a summary of the analyzed dataset.
+To allow a better assessment of translational relevance from mouse models to human CLD we analyzed genome-wide transcriptome data from seven mouse models (one with chronic and six with acute liver damage) comprising 227 mice and five studies of human CLD with a total of 372 patients. 
 
 See the corresponding publication for more details: [_Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice_](https://doi.org/10.1002/hep4.1797).
 
