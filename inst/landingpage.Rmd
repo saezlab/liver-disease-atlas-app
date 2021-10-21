@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Welcome to the Liver disease app
+> a web application to browse gene regulation of chronic and acute liver disease
+
+The prevalence of chronic liver diseases (CLD) has increased during the last decades. Mouse models are frequently used to study the pathophysiology of liver diseases, identify therapeutic targets, and test drug candidates.
+
+To allow a better assessment of translational relevance from mouse models to human CLD we analyzed genome-wide transcriptome data from seven mouse models (one with chronic and six with acute liver damage) comprising 227 mice and five studies of human CLD with a total of 372 patients. See the table below for a summary of the analyzed datasets.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+suppressWarnings(library(dplyr))
+suppressWarnings(library(tibble))
+suppressWarnings(library(gt))
+
+data <- tibble(
+  Organism = c(rep("Mouse", 7), rep("Human", 5)),
+  Damage = c("Chronic", rep("Acute", 6), rep("Chronic", 5)),
+  Treatment = c("CCl4 (up to 12 months)", "APAP (up to 16 days)", 
+                "CCl4 (up to 16 days)", "Partial hepatectomy (up to 3 months)", 
+                "BDL (up to 3 weeks)", "LPS (24 hours)", 
+                "Tunicamycin (6 hours)", "Mild vs. advanced NAFLD", 
+                "Full spectrum of NAFLD", "NAFLD and NASH", 
+                "NASH, NAFLD, PBC, and PSC", "HCV and NAFLD"),
+  `Sample size` = c(36, 49, 46, 52, 29, 8, 7, 72, 78, 46, 109, 67),
+  `Accession ID` = c("GSE167216", "GSE167032", "GSE167033", "GSE167034", 
+                     "GSE166867", "GSE166488", "GSE29929", "GSE49541",
+                     "GSE130970", "GSE48452", "GSE61260", "E-MTAB-6863"))
+
+data %>%
+  gt() %>%
+    tab_header(
+      title = "Mouse Models and Patient Cohorts With Genome-Wide Expression Data of Liver Tissue"
+    ) 
+```
+
+See the corresponding publication for more details: [_Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice_](https://doi.org/10.1002/hep4.1797).
+
+### About
+
+This application informs for any gene of interest on: 
+
+* mean expression changes in the chronic and acute mouse models and in patients of different liver disease etiologies. Users may choose to show the log-fold changes or the t-statistic both derived from a differential gene expression analysis.
+
+* the categorization into genes that are altered exclusively during acute or chronic damage or commonly deregulated in both acute and chronic mouse models. The displayed rank in the _chronicity_ box provides information about the reliability, with rank 1 being the most reliable. This classification comprises in total 3,758 genes. The complete list is available at the `data` tab. 
+ 
+* the associated cell type in which we found the gene also significantly deregulated between cirrhotic and healthy patients. This information was inferred from a publicly available single-cell RNA-seq data by [Ramachandran et al., Nature, 2019](https://www.nature.com/articles/s41586-019-1631-3?proof=t).
+
+* if the gene is consistently altered in mice and humans. If this is true, the rank is displayed. See the _consistency_ box. The better the displayed rank (from low to high) the stronger the gene is consistently altered in human and mice. Please visit the `data` tab to see the full list of genes.
+
+
+### How to cite?
+>Holland CH, Ramirez Flores RO, Myllys M, Hassan R, Edlund K, Hofmann U, Marchan R, Cadenas C, Reinders J, Hoehme S, Seddek A, Dooley S, Keitel V, Godoy P, Begher-Tibbe B, Trautwein C, Rupp C, Mueller S, Longerich T, Hengstler JG^#^, Saez-Rodriguez J^#^, Ghallab A^#^. "Transcriptomic cross-species analysis of chronic liver disease reveals consistent regulation between humans and mice." _Hepatology Communications_. 2021. DOI: [10.1002/hep4.1797](https://doi.org/10.1002/hep4.1797).
+
+^# _Shared senior authorship_
+
+
+
