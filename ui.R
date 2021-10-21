@@ -12,6 +12,8 @@ ui <- function(request) {
                   "Liver disease app"),
       windowTitle = "Liver disease app",
       collapsible=T,
+      footer = column(12, align="center",
+                      "Liver disease atlas app (1.0.1)"),
       
       #### Welcome ####
       tabPanel(
